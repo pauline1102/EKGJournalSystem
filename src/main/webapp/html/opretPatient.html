@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OpretPatient</title>
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="stylesheet" type="text/css" href="../css/opretPatient.css">
+</head>
+<body>
+<div class="container">
+    <div class="header" id="grid-item1">
+        <u class="underlineHeader">
+            <text class="header1">Sundhedsplatformen 2.0</text>
+        </u><br>
+        <text class="header2">Elektronisk patient journal</text>
+        <br>
+        <text class="header3">Anno 2021</text>
+        <br>
+    </div>
+
+    <div class="overskriftside">
+        <p> Opret ny patient </p>
+    </div>
+    <div class="grid-item3">
+        Angiv følgende oplysninger.<br>
+        Bekræft med OK
+    </div>
+
+    <div class="grid-item4">
+        <form id="formOP">
+            <div>
+                <label for="patientnavn">Navn på patient:</label>
+            </div>
+            <div id="patientnavn">
+                <input name="patientnavn" id="patientnavn2">
+            </div>
+            <div>
+                <label for="cprpatient">CPR-nummer for patient:</label><br>
+            </div>
+            <div>
+                <input name="cprpatient" id="cprpatient">
+            </div>
+        </form>
+        <br>
+        <button id="opretPatient" onclick="opretPatient();">Opret patient</button>
+    </div>
+</div>
+</body>
+</html>

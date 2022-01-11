@@ -1,0 +1,22 @@
+.grid-item3{
+    grid-column-start: line2;
+    grid-column-end: line3;
+    grid-row-start: row1-end;
+    grid-row-end: third-line;
+    justify-self: center;
+    align-self: end;
+    font-style: italic;
+}
+
+.grid-item4{
+
+}
+/*
+.container{
+    display: grid;
+    grid-template-columns: [first] 1000px [line2] auto [line3] 100px [end];
+    grid-template-rows: [row1-start] 70px [row1-end] 100px [third-line] auto [lastline];
+    width: 100%;
+}
+
+ */

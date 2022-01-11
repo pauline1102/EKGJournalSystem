@@ -1,0 +1,24 @@
+
+#aftaler{
+    border: 1px solid black;
+    height: 250px;
+
+}
+#opretkonsdiv{
+    width:100%;
+    position:relative;
+
+}
+
+#opretkonskasse{
+    position: absolute;
+    width: 400px;
+    margin-left: 50%;
+    transform: translate(-50%);
+}
+
+.tekstoverskrift{
+    font-weight: bold;
+    color: #00befd;
+
+}
