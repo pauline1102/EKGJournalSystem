@@ -3,7 +3,7 @@ async function opretPatient() {
     let formData = new FormData(formElement);
     let json = Object.fromEntries(formData);
     let res = await fetch(
-        "rest/", {
+        "rest/patienter", {
             method: "POST",
             body: JSON.stringify(json),
             headers: {

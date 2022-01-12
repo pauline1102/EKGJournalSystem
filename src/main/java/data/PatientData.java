@@ -1,8 +1,18 @@
 package data;
 
 public class PatientData {
+
+    @Override
+    public String toString() {
+        return "Patient{" +
+                "navn='" + name + '\'' +
+                ", cpr='" + cpr + '\'' +
+                '}';
+    }
+
     private String name;
     private String cpr;
+
     public String getName() {
         return name;
     }
