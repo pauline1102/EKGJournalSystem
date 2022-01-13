@@ -15,13 +15,13 @@ public class AftaleDAO {
 
 
     public List<AftaleData> getAftaler() {
-        String getAftaler = "SELECT * FROM aftale";
+        String getAftaler = "SELECT * FROM aftaler";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(getAftaler);
             ResultSet resultSet = preparedStatement.executeQuery();
             List<AftaleData> aftaleList = new ArrayList<>();
             while (resultSet.next()){
-                String cpr = resultSet.getString("CPR");
+                String cpr = resultSet.getString("cpr");
                 String date = resultSet.getString("date");
                 AftaleData aftale = new AftaleData(date,cpr);
                 aftaleList.add(aftale);
@@ -36,7 +36,7 @@ public class AftaleDAO {
 
     public void addAftale(AftaleData aftale){
 
-        String insertAftale = "INSERT INTO aftale (CPR, date)" + " VALUES (?,?);";
+        String insertAftale = "INSERT INTO aftaler (cpr, date)" + " VALUES (?,?);";
         System.out.println(insertAftale);
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(insertAftale);
@@ -51,14 +51,14 @@ public class AftaleDAO {
     }
 
     public List<AftaleData> getAftaler(String findCpr) {
-        String getAftaler = "SELECT * FROM aftale WHERE CPR = ?";
+        String getAftaler = "SELECT * FROM aftaler WHERE cpr = ?";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(getAftaler);
             preparedStatement.setString(1,findCpr);
             ResultSet resultSet = preparedStatement.executeQuery();
             List<AftaleData> aftaleList = new ArrayList<>();
             while (resultSet.next()){
-                String cpr = resultSet.getString("CPR");
+                String cpr = resultSet.getString("cpr");
                 String date = resultSet.getString("date");
                 AftaleData aftale = new AftaleData(date,cpr);
                 aftaleList.add(aftale);
@@ -69,13 +69,18 @@ public class AftaleDAO {
         }
         return null;
     }
+
+    public void deleteAftaler(AftaleData aftale){
+        String deleteAftaler = "DELETE FROM aftaler WHERE date = (?);";
+        try{
+            PreparedStatement preparedStatement = connection.prepareStatement(deleteAftaler);
+            preparedStatement.setString(1, aftale.getCpr());
+            preparedStatement.setString(2, aftale.getDate());
+            preparedStatement.execute();
+        } catch (SQLException e) {
+            System.out.println("Aftale er ikke slettet");
+            e.printStackTrace();
+        }
+    }
 }
-
-//    public void addAftale(Aftale nyAftale){
-//        //TODO tilføj aftaler til database
-//        System.out.println("Opretter aftale...");
-//        this.aftaleList.add(nyAftale);
-//        System.out.println("Aftale oprettet! " + nyAftale);
-//    }
-
 
