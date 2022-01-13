@@ -13,7 +13,24 @@ import java.io.IOException;
 public class AuthFilter implements ContainerRequestFilter {
     @Override
     public void filter(ContainerRequestContext containerRequestContext) throws IOException {
-        System.out.println(containerRequestContext.getUriInfo().getPath());
+            System.out.println(containerRequestContext.getUriInfo().getPath());
+//Undgå at afvise folk der prøver at logge ind.
+            String path = containerRequestContext.getUriInfo().getPath();
+
+            if (!"login".equals(path) && !"ecg".equals(path)) {
+                String authorization = containerRequestContext.getHeaderString("Authorization");
+                if (authorization == null) {
+                    throw new WebApplicationException("manglende header", 401);
+                }
+                JWTHandler.validate(authorization.split(" ")[1]);
+            }
+        }
+    }
+
+
+
+
+       /* System.out.println(containerRequestContext.getUriInfo().getPath());
 //Undgå at afvise folk der prøver at logge ind.
         if (!"login".equals(containerRequestContext.getUriInfo().getPath())) {
             String authorization = containerRequestContext.getHeaderString("Authorization");
@@ -24,4 +41,4 @@ public class AuthFilter implements ContainerRequestFilter {
         }
     }
 }
-
+        */
