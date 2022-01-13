@@ -7,7 +7,8 @@ async function opretPatient() {
             method: "POST",
             body: JSON.stringify(json),
             headers: {
-                "content-type": "application/json"
+                "content-type": "application/json",
+                "authorization": "Bearer " + localStorage.getItem("token")
             }
         })
 }
