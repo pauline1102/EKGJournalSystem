@@ -12,8 +12,10 @@ public class Ekg {
     public void setData(List<Float> data) {
         this.data = data;
     }
+
+
 }
 //https://reqbin.com/code/python/m2g4va4a/python-requests-post-json-example
 
 
-}
+

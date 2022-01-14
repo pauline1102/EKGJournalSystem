@@ -36,12 +36,14 @@ public class AftaleService {
         return aftaleDAO.getAftaler(cpr);
     }
 
-    @DELETE
+/*    @DELETE
     @Consumes(MediaType.APPLICATION_JSON)
     @Path("{id}")
     public void deleteAftale(@PathParam("id") String id){
         aftaleDAO.deleteAftaler(id);
     }
+
+ */
 
     /*
     @DELETE
