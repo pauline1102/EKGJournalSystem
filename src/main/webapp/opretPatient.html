@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/opretPatient.css">
     <script src="js/opretPatient.js"></script>
+    <script src="js/hentkons.js"></script>
 </head>
 <body>
 <div class="container">
@@ -44,6 +45,26 @@
         </form>
         <br>
         <button id="opretPatient" onclick="opretPatient();">Opret patient</button>
+    </div>
+    <div>
+        <div class="tekstoverskrift">Skriv ID</div>
+        <br>
+        <form id="formID">
+            <input id="skrivID" name="skrivID" placeholder="Indtast ID" required type="text">
+        </form>
+        <br>
+        <div>
+            <button id="hentkonsknap" onclick="hentEKGDATA();">Hent ekgdata</button>
+        </div>
+        <br>
+        <br>
+    </div>
+    <div id="konsIDatabase">
+        <div class="tekstoverskrift">
+            Konsultationer i databasen
+        </div>
+        <ul id="aftaler">
+        </ul>
     </div>
 </div>
 </body>
