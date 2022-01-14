@@ -3,7 +3,16 @@ package data;
 import java.util.List;
 
 public class Ekg {
+
+   // String measurements;
     List<Float> data;
+
+//Tanken er at dette kan bruges til at strukturere dataen, så den kan behandles som en String
+ /*   public String getMeasurements(){return measurements;}
+
+    public void setMeasurements(String measurements) {
+        this.measurements = measurements;
+    }*/
 
     public List<Float> getData() {
         return data;

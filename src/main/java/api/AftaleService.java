@@ -5,11 +5,6 @@ import data.AftaleDAO;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.List;
 
 @Path("aftaler")
@@ -41,12 +36,11 @@ public class AftaleService {
     @Path("{id}")
     public void deleteAftale(@PathParam("id") String id){
         aftaleDAO.deleteAftaler(id);
-    }
+    }*/
 
- */
 
     /*
-    @DELETE
+    /*@DELETE
     @Consumes(MediaType.APPLICATION_JSON)
     public void deleteAftale(String cpr) {
         System.out.println("Removing aftale with CPR: " + cpr);

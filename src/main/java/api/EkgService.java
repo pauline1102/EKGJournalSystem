@@ -17,8 +17,7 @@ public class EkgService {
         @Consumes(MediaType.APPLICATION_JSON)
         public String postEKGDATA(Ekg data){
             System.out.println(data.getData().toString());
-            ekgDAO.addEkg(data);
-            return "hej";
+            String id = ekgDAO.addEkg(data);
+            return id;
         }
-
 }
