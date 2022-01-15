@@ -5,24 +5,41 @@
     <title>EKG-graf</title>
     <script src="js/ekgVisual.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/ekgVisual.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
-<div>
-    <div class="tekstoverskrift">Skriv ID</div>
-    <br>
-    <form>
-        <input id="skrivID" name="skrivID" placeholder="Indtast ID" required type="text">
-    </form>
-    <br>
-    <div>
-        <button onclick="hentEKGDATA();">Hent ekgdata</button>
+<div class="grid">
+
+    <div class="item1 header" id="myHeader">
+        <u class="underlineHeader">
+            <text class="header1">Sundhedsplatformen 3.0</text>
+        </u><br>
+        <text class="header2">Elektronisk patient journal</text>
+        <br>
+        <text class="header3">Anno 2022</text>
+        <br>
+        <p><input type="button" id="LogudButton" onclick="Logud()" class="button1" value="Log ud"></p>
     </div>
-    <br>
-    <br>
+
+    <div class="item2 overskriftside">
+        <p>Vis EKG</p>
+    </div>
+    <div class="item3" id="tekstForklar">
+        <label for="skrivID">Indtast sessions-ID</label>
+    </div>
+    <div class="item4">
+        <form>
+            <input id="skrivID" name="skrivID" placeholder="Indtast ID" required type="text">
+        </form>
+    </div>
+    <div class="item5">
+        <button onclick="hentEKGDATA();">Hent EKG</button>
+    </div>
+    <canvas id="myChart" class="item4">
+
+    </canvas>
 </div>
 
-<canvas id="myChart">
-
-</canvas>
 </body>
 </html>

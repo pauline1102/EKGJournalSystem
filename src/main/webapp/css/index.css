@@ -70,12 +70,12 @@ h1{
     font-size: x-large;
     font-weight: bold;
     width: 300px;
-    grid-row-start: row1-end;
+ /*   grid-row-start: row1-end;
     grid-row-end: third-line;
     grid-column-start: line2;
     grid-column-end: line3;
     justify-self: center;
-    align-self: start;
+    align-self: start;*/
 }
 
 

@@ -1,10 +1,5 @@
 //hent egk data og gem i objekt (json)
 
-window.onload = (function (){
-    let canvas = document.getElementById("myChart");
-    let context = canvas.getContext("2d")
-})
-
 async function hentEKGDATA() {
     const sessionID = document.getElementById("skrivID").value
     let result = await fetch("rest/ecg/" + sessionID, {
@@ -22,8 +17,8 @@ async function hentEKGDATA() {
        datasets:
             [
                 {label:"ekg",
-                    backgroundColor: 'rgb(255, 99, 132)',
-                    borderColor: 'rgb(255, 99, 132)',
+                    backgroundColor: 'rgb(255, 0, 0)',
+                    borderColor: 'rgb(255, 0, 0)',
                     data: ekgdata}
             ]
    }

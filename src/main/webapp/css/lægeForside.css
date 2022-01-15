@@ -6,7 +6,6 @@
 
 .grid{
     display: grid;
-    justify-content: stretch;
     grid-template-columns: [one] auto [two] 100px [three] 100px [four] 100px [five] 100px [six] 100px [seven] 100px [eight] 100px [nine] 100px [ten] auto [eleven];
     grid-template-rows: [row1-start] 70px [row1-end] 100px [third-line] 230px [fourth-line] auto [lastline];
     column-gap: 15px;
