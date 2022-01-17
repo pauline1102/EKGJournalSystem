@@ -1,4 +1,4 @@
-import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+/*import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import data.Aftale;
 
 import javax.servlet.ServletException;
@@ -73,3 +73,5 @@ public class XMLServlet extends HttpServlet {
 
 
 }
+
+ */

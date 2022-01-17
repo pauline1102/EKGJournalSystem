@@ -1,4 +1,4 @@
-import com.fasterxml.jackson.core.JsonProcessingException;
+/*import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
 import java.io.File;
@@ -11,7 +11,7 @@ import data.Aftale;
 
 import java.io.File;
         import java.io.IOException;
-@Deprecated
+
 public class XMLSerializer {
     public static void main(String[] args) {
         Aftale aftale = new Aftale();
@@ -38,3 +38,5 @@ public class XMLSerializer {
         }
     }
 }
+
+ */

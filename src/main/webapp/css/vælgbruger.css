@@ -50,9 +50,10 @@
 
 
 #vælglægeknap{
-    width: 50%;
-    margin-left:25%
+    width: 25%;
+    margin-left:35%
 }
 #vælgpatientknap{
-    margin-left:25%;
+    width: 30%;
+    margin-left:33%;
 }
