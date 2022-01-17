@@ -70,6 +70,7 @@ h1{
     font-size: x-large;
     font-weight: bold;
     width: 300px;
+    font-family: inherit;
  /*   grid-row-start: row1-end;
     grid-row-end: third-line;
     grid-column-start: line2;

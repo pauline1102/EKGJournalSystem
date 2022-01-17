@@ -25,17 +25,18 @@
     <div class="item2 overskriftside">
         <p>Vis EKG</p>
     </div>
-    <div class="item3" id="tekstForklar">
-        <label for="skrivID">Indtast sessions-ID</label>
+    <div id="tekstForklar">
+        <label for="skrivID">Indtast sessions-ID for den ønskede patient. </label>
     </div>
-    <div class="item4">
+    <div>
         <form>
             <input id="skrivID" name="skrivID" placeholder="Indtast ID" required type="text">
         </form>
     </div>
-    <div class="item5">
-        <button onclick="hentEKGDATA();">Hent EKG</button>
+    <div >
+        <input type="button" onclick="hentEKGDATA();" id="hentEKG">
     </div>
+
     <canvas id="myChart" class="item4">
 
     </canvas>

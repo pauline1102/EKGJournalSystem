@@ -14,16 +14,20 @@ public class AftaleDAO {
     private static Connection connection = new DBConnector().getMySQLConnection();
 
 
-    public List<AftaleData> getAftaler() {
+   /* public List<AftaleData> getAftalen() {
         String getAftaler = "SELECT * FROM aftaler";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(getAftaler);
             ResultSet resultSet = preparedStatement.executeQuery();
             List<AftaleData> aftaleList = new ArrayList<>();
             while (resultSet.next()){
-                String cpr = resultSet.getString("cpr");
-                String date = resultSet.getString("date");
-                AftaleData aftale = new AftaleData(date,cpr);
+                String cpr = resultSet.getString("CPR");
+                String id = resultSet.getString("ID");
+                String timeStart = resultSet.getString("timeStart");
+                String timeEnd = resultSet.getString("timeEnd");
+                int klinikID = resultSet.getInt("klinikID");
+                String notat = resultSet.getString("notat");
+                AftaleData aftale = new AftaleData();
                 aftaleList.add(aftale);
             }
             return aftaleList;
@@ -32,16 +36,20 @@ public class AftaleDAO {
         }
         return null;
 
-    }
+    }*/
 
     public void addAftale(AftaleData aftale){
 
-        String insertAftale = "INSERT INTO aftaler (cpr, date)" + " VALUES (?,?);";
+        String insertAftale = "INSERT INTO aftaler (CPR, ID, timeStart, timeEnd, klinikID, notat )" + " VALUES (?,?,?,?,?,?);";
         System.out.println(insertAftale);
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(insertAftale);
             preparedStatement.setString(1, aftale.getCpr());
-            preparedStatement.setString(2, aftale.getDate());
+            preparedStatement.setString(2, aftale.getId());
+            preparedStatement.setString(3, aftale.getTimeStart());
+            preparedStatement.setString(4, aftale.getTimeEnd());
+            preparedStatement.setInt(5, aftale.getKlinikID());
+            preparedStatement.setString(6, aftale.getNotat());
             preparedStatement.execute();
         } catch (SQLException ex) {
             System.out.println("Ups.. Der opstod en fejl under oprettelsen af aftalen. Prøv igen eller kontakt udviklerne!");
@@ -50,20 +58,25 @@ public class AftaleDAO {
 
     }
 
-    public List<AftaleData> getAftaler(String findCpr) {
+    public AftaleListe getAftaler(String findCpr) {
         String getAftaler = "SELECT * FROM aftaler WHERE cpr = ?";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(getAftaler);
             preparedStatement.setString(1,findCpr);
             ResultSet resultSet = preparedStatement.executeQuery();
-            List<AftaleData> aftaleList = new ArrayList<>();
+            AftaleListe aftaleListe = new AftaleListe();
+           // List<AftaleData> aftaleList = new ArrayList<>();
             while (resultSet.next()){
-                String cpr = resultSet.getString("cpr");
-                String date = resultSet.getString("date");
-                AftaleData aftale = new AftaleData(date,cpr);
-                aftaleList.add(aftale);
+                String cpr = resultSet.getString("CPR");
+                String id = resultSet.getString("ID");
+                String timeStart = resultSet.getString("timeStart");
+                String timeEnd = resultSet.getString("timeEnd");
+                int klinikID = resultSet.getInt("klinikID");
+                String notat = resultSet.getString("notat");
+                AftaleData aftale = new AftaleData(cpr, id, timeStart, timeEnd, klinikID, notat);
+                aftaleListe.getAftaler().add(aftale);
             }
-            return aftaleList;
+            return aftaleListe;
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
@@ -71,11 +84,10 @@ public class AftaleDAO {
     }
 
     public void deleteAftaler(AftaleData aftale){
-        String deleteAftaler = "DELETE FROM aftaler WHERE date = (?);";
+        String deleteAftaler = "DELETE FROM aftaler WHERE CPR = (?);";
         try{
             PreparedStatement preparedStatement = connection.prepareStatement(deleteAftaler);
             preparedStatement.setString(1, aftale.getCpr());
-            preparedStatement.setString(2, aftale.getDate());
             preparedStatement.execute();
         } catch (SQLException e) {
             System.out.println("Aftale er ikke slettet");

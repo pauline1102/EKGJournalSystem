@@ -2,6 +2,7 @@ package api;
 
 import data.AftaleData;
 import data.AftaleDAO;
+import data.AftaleListe;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -12,12 +13,12 @@ public class AftaleService {
 
     private AftaleDAO aftaleDAO = new AftaleDAO();
 
-    @GET
-    @Produces(MediaType.APPLICATION_JSON)
+ /*   @GET
+    @Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
     public List<AftaleData> getAftaler() {
         return aftaleDAO.getAftaler();
     }
-
+*/
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     public void opretAftale(AftaleData aftale) {
@@ -25,9 +26,10 @@ public class AftaleService {
     }
 
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
+    @Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
     @Path("{cpr}")
-    public List<AftaleData> getAftale(@PathParam("cpr") String cpr) {
+    public AftaleListe getAftale(@PathParam("cpr") String cpr) { //skal der være en query param her også??
+        System.out.println(aftaleDAO.getAftaler(cpr));
         return aftaleDAO.getAftaler(cpr);
     }
 

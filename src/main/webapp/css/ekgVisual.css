@@ -70,7 +70,10 @@
 }
 
 #myChart{
-
     height: 600px;
     width: 800px;
+}
+
+#hentEKG{
+    width: 100px;
 }
