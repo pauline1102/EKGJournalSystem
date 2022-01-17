@@ -4,18 +4,18 @@
 
 }
 
-#sejournal{
+#vælgpatient{
     width: 200px;
     position: absolute;
     float: left;
     margin-left: 30%;
     margin-top: 50px;
-   /* margin-left: 25%;
-    margin-top: 50px;
-    */
-  transform: translate(-50%);
+    /* margin-left: 25%;
+     margin-top: 50px;
+     */
+    transform: translate(-50%);
 }
-#sekonsultationer{
+#vælglæge{
     width: 200px;
     position: absolute;
     float: left;
@@ -24,35 +24,35 @@
     transform: translate(-50%);
 
 }
-#kalenderikon{
+#patientikon{
     width: 100%;
-    border-radius:50%;
-    border: 1px solid darkblue;
+   border: 1px solid #00008b ;
+    border-radius: 50%;
+    background-color:lightblue;
+
 
 }
-
-#patientforsidekasse{
+ #patientforsidekasse{
     width: 100%;
     position: relative;
 }
 
 
-#journalikon{
-    width: 50%;
+
+#lægeikon{
+    width: 100%;
     border-radius: 50%;
     border: 1px solid darkblue;
     height: 200px;
+    background-color:lightblue;
 
 }
 
 
-#sejorunalknap{
-    width: 100%;
-    margin-left: 25%;
+#vælglægeknap{
+    width: 50%;
+    margin-left:25%
 }
-
-#sekonsultationerknap  {
-    width:100%;
+#vælgpatientknap{
     margin-left:25%;
 }
-

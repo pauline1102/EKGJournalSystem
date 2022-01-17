@@ -17,7 +17,7 @@ async function doLogin(){
     if (res.status==200){
         localStorage.setItem("token", token);
         console.log(token);
-        window.location.href="ekgVisual.html"
+        window.location.href="vælgbruger.html"
     }
     else{
         alert("Du er ikke logget ind")

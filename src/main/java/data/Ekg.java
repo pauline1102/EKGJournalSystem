@@ -15,7 +15,9 @@ public class Ekg {
         this.sessionID = sessionID;
     }
 
+public Ekg(){
 
+}
 
     public Ekg(Float measurement, String sessionsID) {
     }
