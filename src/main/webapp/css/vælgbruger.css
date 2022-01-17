@@ -1,0 +1,59 @@
+.Btncontainer{
+    width:100%;
+    position: relative;
+
+}
+
+#vælgpatient{
+    width: 200px;
+    position: absolute;
+    float: left;
+    margin-left: 30%;
+    margin-top: 50px;
+    /* margin-left: 25%;
+     margin-top: 50px;
+     */
+    transform: translate(-50%);
+}
+#vælglæge{
+    width: 200px;
+    position: absolute;
+    float: left;
+    margin-left: 65%;
+    margin-top: 50px;
+    transform: translate(-50%);
+
+}
+#patientikon{
+    width: 100%;
+   border: 1px solid #00008b ;
+    border-radius: 50%;
+    background-color:lightblue;
+
+
+}
+ #patientforsidekasse{
+    width: 100%;
+    position: relative;
+}
+
+
+
+#lægeikon{
+    width: 100%;
+    border-radius: 50%;
+    border: 1px solid darkblue;
+    height: 200px;
+    background-color:lightblue;
+
+}
+
+
+#vælglægeknap{
+    width: 25%;
+    margin-left:35%
+}
+#vælgpatientknap{
+    width: 30%;
+    margin-left:33%;
+}

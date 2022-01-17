@@ -4,7 +4,7 @@ async function Logud(){
 
 }
 
-async function gotoopretkonsultation(){
+async function patient(){
     let token = localStorage.getItem("token")
     fetch("rest/tokentest",{
         method:"POST",
@@ -13,10 +13,10 @@ async function gotoopretkonsultation(){
             "authorization": "Bearer "+localStorage.getItem("token")
         }
     })
-    window.location.href="OpretKonsultation.html"
+    window.location.href="PatientForside.html"
 }
 
-async function journal(){
+async function læge(){
     let token = localStorage.getItem("token")
     fetch("rest/tokentest",{
         method:"POST",
@@ -25,5 +25,5 @@ async function journal(){
             "authorization": "Bearer "+localStorage.getItem("token")
         }
     })
-    window.location.href="HentKonsultation.html"
+    window.location.href="lægeForside.html"
 }

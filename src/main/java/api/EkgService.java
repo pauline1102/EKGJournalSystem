@@ -21,7 +21,7 @@ public class EkgService {
         return id;
     }
 
-    @GET
+    /*@GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("{sessionID}")
     public List<Float> getEkgListe(@PathParam("sessionID") String sessionID){
@@ -29,4 +29,8 @@ public class EkgService {
         System.out.println("Listen =" + ekgDAO.getEkg((sessionID)));
         return ekgDAO.getEkg(sessionID);
     }
+
+     */
 }
+
+

@@ -1,0 +1,87 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: [one] auto [two] 100px [three] 100px [four] 100px [five] 100px [six] 100px [seven] 100px [eight] 100px [nine] 100px [ten] auto [eleven];
+    grid-template-rows: [row1-start] 70px [row1-end] 100px [third-line] 230px [fourth-line] auto [lastline];
+    column-gap: 15px;
+    row-gap: 10px;
+}
+.item1{
+    grid-column-start: one;
+    grid-column-end: eleven;
+    column-span: 10;
+    grid-row-start: row1-start;
+    grid-row-end: row1-end;
+}
+
+.item2{
+    grid-row-start: row1-end;
+    grid-row-end: third-line;
+    grid-column-start: five;
+    grid-column-end: seven;
+    justify-self: start;
+    align-self: center;
+}
+
+.opret{
+    grid-row-start: third-line;
+    grid-row-end: fourth-line;
+    grid-column-start: two;
+    grid-column-end: four;
+    width: 200px;
+}
+.hent{
+    grid-row-start: third-line;
+    grid-row-end: fourth-line;
+    grid-column-start: four;
+    grid-column-end: six;
+    width: 200px;
+}
+.ændre{
+    grid-row-start: third-line;
+    grid-row-end: fourth-line;
+    grid-column-start: six;
+    grid-column-end: eight;
+    width: 200px;
+}
+.slet{
+    grid-row-start: third-line;
+    grid-row-end: fourth-line;
+    grid-column-start: eight;
+    grid-column-end: 10;
+    width: 200px;
+}
+
+.ikoner{
+    width: 100%;
+
+}
+.opretknap{
+    width: 100%;
+}
+.sletknap{
+    width: 100%;
+}
+.hentknap{
+    width: 100%;
+}
+.sletknap{
+    width: 100%;
+}
+.ændreknap{
+    width: 100%;
+}
+
+#heart{
+    height: 200px;
+}
+
+#kontakt{
+    height: 200px;
+    width: 200px;
+}
