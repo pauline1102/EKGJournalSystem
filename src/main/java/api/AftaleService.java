@@ -1,6 +1,7 @@
 package api;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import data.AftaleDAO;
 import data.AftaleData;
 import data.AftaleListe;
@@ -8,7 +9,7 @@ import data.AftaleListe;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
-@Path("aftaler")
+@Path("aftale")
 public class AftaleService {
 
     private AftaleDAO aftaleDAO = new AftaleDAO();
@@ -22,6 +23,7 @@ public class AftaleService {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     public void opretAftale(AftaleData aftale) {
+
         aftaleDAO.addAftale(aftale);
     }
 
@@ -34,9 +36,11 @@ public class AftaleService {
     }
 
     @GET
-    @Produces(MediaType.APPLICATION_XML)
-    public AftaleListe getAftaleXML(@QueryParam("cpr") String cpr) throws JsonProcessingException {
-        return aftaleDAO.getAftaler(cpr);
+    @Produces(MediaType.APPLICATION_JSON)
+    public String getAftaleXML(@QueryParam("cpr") String cpr) throws JsonProcessingException {
+        XmlMapper mapper = new XmlMapper();
+        String s = mapper.writeValueAsString(aftaleDAO.getAftaler(cpr));
+        return s;
     }
 /*    @DELETE
     @Consumes(MediaType.APPLICATION_JSON)

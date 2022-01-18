@@ -1,27 +1,29 @@
 package api;
 
-import data.AftaleDAO;
-import data.AftaleData;
-import data.Ekg;
+import com.mysql.cj.Session;
+import data.EkgData;
 import data.EkgDAO;
+import data.SessionDAO;
+import data.SessionsData;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
 
-@Path("ecg")
-public class EkgService {
+@Path("ekgSessions")
+public class SessionService {
     private EkgDAO ekgDAO = new EkgDAO();
+    private SessionDAO sessionsDAO = new SessionDAO();
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    public String postEKGDATA(Ekg data) {
+    public String postEKGDATA(EkgData data) {
         System.out.println(data.getData().toString());
         String id = ekgDAO.addEkg(data);
         return id;
     }
 
-    /*@GET
+    @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("{sessionID}")
     public List<Float> getEkgListe(@PathParam("sessionID") String sessionID){
@@ -30,7 +32,13 @@ public class EkgService {
         return ekgDAO.getEkg(sessionID);
     }
 
-     */
+    @GET
+    @Path("{cpr}")
+    public String getCPR(@PathParam("cpr") String cpr){
+        System.out.println("sessionID for CPR? = " +sessionsDAO.getSessions(cpr));
+        return sessionsDAO.getSessionID(cpr);
+    }
+
 }
 
 

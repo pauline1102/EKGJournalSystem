@@ -1,0 +1,16 @@
+#aftale{
+border-color: #00befd;
+    width: 100px;
+    height: auto;
+}
+
+#sessions{
+    border-color: #00befd;
+
+    width: 100px;
+    height: auto;
+}
+.skriftIKasse{
+    font-style: italic;
+    font-size: small;
+}

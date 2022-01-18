@@ -2,7 +2,7 @@ package data;
 
 import java.util.List;
 
-public class Ekg {
+public class EkgData {
 
    // String measurements;
     List<Float> data;
@@ -15,11 +15,11 @@ public class Ekg {
         this.sessionID = sessionID;
     }
 
-public Ekg(){
+public EkgData(){
 
 }
 
-    public Ekg(Float measurement, String sessionsID) {
+    public EkgData(Float measurement, String sessionsID) {
     }
 
 

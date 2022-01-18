@@ -14,22 +14,22 @@ public class AuthFilter implements ContainerRequestFilter {
     @Override
     public void filter(ContainerRequestContext containerRequestContext) throws IOException {
         System.out.println(containerRequestContext.getUriInfo().getPath());
-        if ("aftaler".equals(containerRequestContext.getUriInfo().getPath())) {
+        if ("aftale".equals(containerRequestContext.getUriInfo().getPath())) {
             System.out.println("tilgår aftaler");
-            if (!containerRequestContext.getHeaderString("Authorization").equals("hemmeliglogin")) {
+            if (!containerRequestContext.getHeaderString("Authorization").equals("Bearer hemmeliglogin")) {
                 throw new WebApplicationException("psst hvad er kodeordet?", 401);
             }
             return;
         }
 //Undgå at afvise folk der prøver at logge ind.
-            String path = containerRequestContext.getUriInfo().getPath();
+         /*   String path = containerRequestContext.getUriInfo().getPath();
             if (!"login".equals(path) && !"ecg".equals(path)) {
                 String authorization = containerRequestContext.getHeaderString("Authorization");
                 if (authorization == null) {
                     throw new WebApplicationException("manglende header", 401);
                 }
                 JWTHandler.validate(authorization.split(" ")[1]);
-            }
+            }*/
         }
     }
 

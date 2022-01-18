@@ -5,8 +5,10 @@ import db.DBConnector;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
 import javax.ws.rs.core.MediaType;
+import javax.xml.transform.Result;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class PatientDAO {
@@ -25,4 +27,23 @@ public class PatientDAO {
             ex.printStackTrace();
         }
     }
+
+    public PatientData getPatient(String findcpr){
+    String getPatient = "SELECT * FROM patienter WHERE cpr = ?";
+    try {
+        PreparedStatement preparedStatement = connection.prepareStatement(getPatient);
+        preparedStatement.setString(1, findcpr);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        if (resultSet.next()) {
+            PatientData foundPatient = new PatientData();
+            foundPatient.setName(resultSet.getString("name"));
+            foundPatient.setCpr(resultSet.getString("cpr"));
+            System.out.println("Patient fundet: " + foundPatient);
+            return foundPatient;
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
+    } return null;
+    }
 }
+

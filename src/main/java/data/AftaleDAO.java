@@ -8,6 +8,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 
 public class AftaleDAO {
@@ -39,7 +40,8 @@ public class AftaleDAO {
     }*/
 
     public void addAftale(AftaleData aftale){
-
+        String ID = UUID.randomUUID().toString();
+        aftale.setId(ID);
         String insertAftale = "INSERT INTO aftaler (CPR, ID, timeStart, timeEnd, klinikID, notat )" + " VALUES (?,?,?,?,?,?);";
         System.out.println(insertAftale);
         try {

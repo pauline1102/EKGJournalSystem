@@ -4,9 +4,47 @@
     <meta charset="UTF-8">
     <title>Hent data fra andre hospitaler</title>
     <script src="js/hentDataFraAndre.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/hentDataFraAndre.css">
 </head>
 <body>
-<div id="aftale"></div>
-<button onclick="postAftale();">Hent aftaler</button>
+<div class="header" id="myHeader">
+    <u class="underlineHeader">
+        <text class="header1">Sundhedsplatformen 3.0</text>
+    </u><br>
+    <text class="header2">Elektronisk patient journal</text>
+    <br>
+    <text class="header3">Anno 2022</text>
+    <br>
+    <p><input type="button" id="LogudButton" onclick="Logud()" class="button1" value="Log ud"></p>
+    <p>
+        <button id="iddButton" class="button1" onclick="Tilbage()">Tilbage</button>
+    </p>
+</div>
+<div>
+    <form id="hentfraAndre">
+        <input type="text" placeholder="Skriv CPR" id="skrivcpr" form="hentfraAndre">
+    </form>
+</div>
+
+<button onclick="getAftale()">Hent aftaler</button>
+<button onclick="getSession()"> Hent sessions</button>
+<br>
+<div>
+<form>
+    <input type="text" placeholder="Skriv SessionID" id="skrivsessionID">
+</form>
+    <button onclick="getMeasurements()">Hent measurements</button>
+    <br>
+    <div id="measurements1">
+    </div>
+</div>
+<br>
+<div id="aftale">
+    <p class="skriftIKasse">Aftaler fra andre:</p>
+</div>
+<div id="sessions">
+    <p class="skriftIKasse">Sessions fra andre:</p>
+</div>
 </body>
 </html>

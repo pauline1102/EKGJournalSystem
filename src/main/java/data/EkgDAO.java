@@ -14,15 +14,15 @@ import java.util.UUID;
 public class EkgDAO {
     private static Connection connection = new DBConnector().getMySQLConnection();
 
-    public String addEkg(Ekg ekg){
+    public String addEkg(EkgData ekgData){
 
         String insertEkg = "INSERT INTO measurements (dataEkg, sessionID, orderNo)" + " VALUES (?,?,?);";
         System.out.println(insertEkg);
         try {
             UUID sessionID = UUID.randomUUID();
             PreparedStatement preparedStatement = connection.prepareStatement(insertEkg);
-            for (int i = 0; i <ekg.getData().size(); i++) {
-                preparedStatement.setFloat(1, ekg.data.get(i));
+            for (int i = 0; i < ekgData.getData().size(); i++) {
+                preparedStatement.setFloat(1, ekgData.data.get(i));
                 preparedStatement.setString(2, sessionID.toString());
                 preparedStatement.setInt(3, i);
                 preparedStatement.addBatch();

@@ -9,7 +9,7 @@ public class AftaleData {
 
     private String cpr;
     private String id;
-    private int klinikID;
+    private int klinikID = 1;
     private String timeStart;
     private String timeEnd;
     private String notat;

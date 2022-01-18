@@ -33,13 +33,13 @@
     grid-row-end: line-four;
     grid-column-start: two;
     grid-column-end: four;
-    width: 200px;
+
 }
 .item4{
     grid-row-start: line-four;
-    grid-row-end: line-five;
+    grid-row-end: line-eight;
     grid-column-start: two;
-    grid-column-end: four;
+    grid-column-end: six;
     width: 200px;
 
 }
@@ -60,7 +60,7 @@
 
 }
 
-#tekstForklar{
+.tekstForklar{
    font-style: italic;
     font-size: small;
 }
