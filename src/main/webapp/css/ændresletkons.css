@@ -1,0 +1,30 @@
+#ændrekonsknap{
+    width: 150px;
+    margin-left:43%;
+}
+
+#sletkonsknap{
+    width: 100%;
+}
+
+#aftaler {
+    border: 1px solid black;
+    height: 100px;
+    width: 200px;
+}
+#opretnykonsultation{
+    margin-left: 62%;
+}
+
+#aftaleform{
+    margin-left: 20%;
+}
+
+#detførste {
+    margin-left: 35%;
+
+}
+
+#sekonsknap{
+    margin-left: 17%;
+}

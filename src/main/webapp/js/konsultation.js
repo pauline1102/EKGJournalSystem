@@ -4,6 +4,13 @@ async function Logud(){
 
 }
 
+async function Tilbage(){
+    localStorage.setItem("token"," ");
+    window.location.href="vælgbruger.html"
+
+}
+
+
 async function opret(){
     let token = localStorage.getItem("token")
     fetch("rest/tokentest",{
@@ -13,7 +20,7 @@ async function opret(){
             "authorization": "Bearer "+localStorage.getItem("token")
         }
     })
-    window.location.href=".html"
+    window.location.href="opretkonsultation.html"
 }
 
 async function hent() {
@@ -25,7 +32,7 @@ async function hent() {
             "authorization": "Bearer " + localStorage.getItem("token")
         }
     })
-    window.location.href = ".html"
+    window.location.href = "hentkons.html"
 }
 
 async function ændre() {
@@ -37,7 +44,7 @@ async function ændre() {
             "authorization": "Bearer " + localStorage.getItem("token")
         }
     })
-    window.location.href = ".html"
+    window.location.href = "ændrekonsultation.html"
 }
 async function slet() {
     let token = localStorage.getItem("token")
@@ -48,5 +55,6 @@ async function slet() {
             "authorization": "Bearer " + localStorage.getItem("token")
         }
     })
-    window.location.href = ".html"
+
+    window.location.href = "sletkonsultation.html"
 }

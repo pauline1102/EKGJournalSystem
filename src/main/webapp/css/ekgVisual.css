@@ -76,4 +76,13 @@
 
 #hentEKG{
     width: 100px;
+    margin-left: 20%;
+}
+
+#tekstForklar{
+    margin-left: 25%;
+}
+
+#skrivID{
+    margin-left: 20%;
 }

@@ -4,6 +4,12 @@ async function Logud(){
 
 }
 
+async function Tilbage(){
+    localStorage.setItem("token"," ");
+    window.location.href="vælgbruger.html"
+
+}
+
 async function gotoopretkonsultation(){
     let token = localStorage.getItem("token")
     fetch("rest/tokentest",{
@@ -13,7 +19,7 @@ async function gotoopretkonsultation(){
             "authorization": "Bearer "+localStorage.getItem("token")
         }
     })
-    window.location.href="OpretKonsultation.html"
+    window.location.href="konsultationer.html"
 }
 
 async function journal(){
@@ -25,5 +31,5 @@ async function journal(){
             "authorization": "Bearer "+localStorage.getItem("token")
         }
     })
-    window.location.href="HentKonsultation.html"
+    window.location.href="journal.html"
 }

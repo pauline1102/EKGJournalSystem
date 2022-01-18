@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Journal</title>
+    <title>Hentkonsultationer</title>
   <link rel="stylesheet" type="text/css" href="css/PFcss.css">
   <link rel="stylesheet" type="text/css" href="css/index.css">
-  <link rel="stylesheet" type="text/css" href="css/rekcss.css">
-  <link rel="stylesheet" type="text/css" href="css/journal.css">
+  <link rel="stylesheet" type="text/css" href="css/patientkons.css">
+    <link rel="stylesheet" type="text/css" href="css/rekcss.css">
+    <script src="js/opretkonsultationer.js"></script>
+    <script src="js/hentkons.js"></script>
 
-  <script src="js/journal.js"></script>
 </head>
 <body>
 <div class="header" id="myHeader">
@@ -18,32 +19,24 @@
   <p><input type="button" id="LogudButton" onclick="Logud()" class="button1" value="Log ud"></p>
     <p><input type="button" id="TilbageButton" onclick="Tilbage()" class="button1" value="Tilbage"></p>
 </div>
-<!--
-<div id="detførste">
-<div class="tekstoverskrift">
- Tryk for at se din journal
-</div>
 
-<input id="sejournalknap" onclick="sejournal()" type="button" value="Se journal">
+<div class="overskriftside item2">
+    <p>Konsultationer </p>
+    <button onclick="SeKonsultation();">Hent konsultation</button>
+
+</div>
+<p></p>
+<div class="tekstoverskrift">
+    Dine konsultationer
+</div>
 <p></p>
 
-<div class="tekstoverskrift">
- Din journal
-</div>
--->
-  <!--https://www.quackit.com/html/codes/html_text_box_code.cfm-->
-  <p></p>
-  <div>
-  <textarea  id="tekstjournal" name="text" cols="25" rows="5">
-Dette er din journal.
-    Vi har foretaget et EKG, og kan se at du har syndromet wolff parkison white....
-</textarea>
+<ul id="aftaler">
+</ul>
 </div>
 </div>
 
 
-<p></p>
-</div>
 
 </body>
 </html>

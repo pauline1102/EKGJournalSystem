@@ -4,6 +4,7 @@ async function Logud(){
 
 }
 
+
 async function patient(){
     let token = localStorage.getItem("token")
     fetch("rest/tokentest",{

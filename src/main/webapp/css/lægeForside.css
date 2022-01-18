@@ -34,6 +34,7 @@
     grid-column-start: two;
     grid-column-end: four;
     width: 200px;
+
 }
 .item4{
     grid-row-start: third-line;

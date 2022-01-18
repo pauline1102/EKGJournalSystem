@@ -11,6 +11,38 @@
 .grid-item4{
 
 }
+
+#konsIDatabase{
+    margin-top: 25%;
+}
+
+#aftaler{
+    border: 1px solid black;
+    height: 200px;
+    width: 200px;
+}
+
+#opretPatient{
+    width: 100px;
+}
+
+#LogudButton{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#TilbageButton{
+    position: absolute;
+    right: 100px;
+    top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
 /*
 .container{
     display: grid;

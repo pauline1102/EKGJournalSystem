@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OpretKonsultation</title>
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <link rel="stylesheet" type="text/css" href="css/rekcss.css">
+  <script src="js/opretkonsultationer.js"></script>
+  <script src="js/konsultation.js"></script>
+</head>
+<body>
+<div class="header" id="myHeader">
+  <u class="underlineHeader"><text class="header1">Sundhedsplatformen 2.0</text></u><br>
+  <text class="header2">Elektronisk patient journal</text><br>
+  <text class="header3">Anno 2021</text><br>
+  <p><input type="button" id="LogudButton" onclick="Logud()" class="button1" value="Log ud"></p>
+  <p><input type="button" id="TilbageButton" onclick="Tilbage()" class="button1" value="Tilbage"></p>
+</div>
+
+<div id="opretkonsultation">
+  <div id="opretkonsoverskrift">
+    <p class="overskriftside"> Opret konsultation</p>
+    <p class="tekstoverskrift"> Angiv start- og sluttidspunkt</p>
+  </div>
+
+
+
+    <form id="aftaleform">
+      <input type="text" name="cpr" placeholder="CPR-nummer">
+      <input type="text" name="TimeStart" placeholder="YYYY-MM-DD-HH:MM">
+      <input type="text" name="TimeEnd" placeholder="YYYY-MM-DD-HH:MM">
+      <input type="text" name="tilføj notat" placeholder="Tilføj notat">
+    </form>
+
+    <br>
+    <button onclick="SeKonsultation();">Se konsultation</button>
+    <button onclick="opretKonsultation();">Opret konsultation</button>
+    <br>
+    <br>
+
+  </div>
+  <br>
+  <br>
+  <div>
+
+    <div class="tekstoverskrift">
+      Dine konsultationer
+    </div>
+    <ul id="aftaler">
+    </ul>
+</div>
+
+</div>
+</body>
+
+</html>

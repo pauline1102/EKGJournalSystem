@@ -12,3 +12,9 @@ async function opretPatient() {
 
         })
 }
+
+async function Tilbage(){
+    localStorage.setItem("token"," ");
+    window.location.href="konsultationer.html"
+
+}

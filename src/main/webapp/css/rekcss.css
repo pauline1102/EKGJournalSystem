@@ -1,12 +1,15 @@
 
 #aftaler{
     border: 1px solid black;
-    height: 250px;
+    height: 200px;
+    width: 200px;
+
 
 }
-#opretkonsdiv{
+#opretkonsultation{
     width:100%;
     position:relative;
+    font-family: inherit;
 
 }
 

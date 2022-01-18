@@ -1,3 +1,4 @@
+
 *{
     box-sizing: border-box;
     padding: 0;
@@ -34,6 +35,7 @@
     grid-column-start: two;
     grid-column-end: four;
     width: 200px;
+
 }
 .hent{
     grid-row-start: third-line;
@@ -61,22 +63,21 @@
     width: 100%;
 
 }
-.opretknap{
+#opretknap{
     width: 100%;
-}
-.sletknap{
-    width: 100%;
-}
-.hentknap{
-    width: 100%;
-}
-.sletknap{
-    width: 100%;
-}
-.ændreknap{
-    width: 100%;
-}
 
+}
+#hentknap{
+    width: 100%;
+
+}
+#ændreknap{
+    width: 100%;
+
+}
+.sletknap{
+    width: 100%;
+}
 #heart{
     height: 200px;
 }
@@ -85,3 +86,5 @@
     height: 200px;
     width: 200px;
 }
+
+

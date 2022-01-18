@@ -5,7 +5,8 @@
     <title>Konsultationer</title>
     <link rel="stylesheet" type="text/css" href="css/PFcss.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
-    <link rel="stylesheet" type="text/css" href="css/lægeForside.css">
+    <link rel="stylesheet" type="text/css" href="css/patientkons.css">
+    <script src="js/konsultation.js"></script>
 </head>
 <body>
 <div class="grid">
@@ -18,33 +19,34 @@
         <text class="header3">Anno 2022</text>
         <br>
         <p><input type="button" id="LogudButton" onclick="Logud()" class="button1" value="Log ud"></p>
+        <p><input type="button" id="TilbageButton" onclick="Tilbage()" class="button1" value="Tilbage"></p>
     </div>
     <div class="overskriftside item2">
         <p>Konsultationer </p>
     </div>
 
-    <div class="item3">
+    <div class="opret">
         <p><img src="patients.jpg" class="ikoner"></p>
-        <p><input class="lfknapper" onclick="" type="button" value="Opret">
+        <p><input id="opretknap" onclick="opret()" type="button" value="Opret konsultation">
         </p>
     </div>
 
 
-    <div class="item4">
+    <div class="hent">
         <p><img src="kalendericon.jpg" class="ikoner"></p>
-        <p><input class="lfknapper" onclick="" type="button" value="Hent">
+        <p><input id="hentknap" onclick="hent()" type="button" value="Hent konsultation">
         </p>
     </div>
 
 
-    <div class="item5">
+    <div class="ændre">
         <p><img src="ecgicon.jpg" id="heart" class="ikoner"></p>
-        <p><input class="lfknapper" onclick="" type="button" value="Ændre"></p>
+        <p><input id="ændreknap" onclick="ændre()" type="button" value="Ændre konsultation"></p>
     </div>
 
-    <div class="item6">
+    <div class="slet">
         <p><img src="contacts.jpg" id="kontakt" class="ikoner"></p>
-        <p><input class="lfknapper" onclick="" type="button" value="Slet">
+        <p><input class="sletknap" onclick="slet()" type="button" value="Slet konsultation">
         </p>
     </div>
 

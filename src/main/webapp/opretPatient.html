@@ -18,11 +18,14 @@
         <br>
         <text class="header3">Anno 2021</text>
         <br>
+        <p><input type="button" id="LogudButton" onclick="Logud()" class="button1" value="Log ud"></p>
+        <p><input type="button" id="TilbageButton" onclick="Tilbage()" class="button1" value="Tilbage"></p>
     </div>
 
     <div class="overskriftside">
         <p> Opret ny patient </p>
     </div>
+
     <div class="grid-item3">
         Angiv følgende oplysninger.<br>
         Bekræft med OK
@@ -44,7 +47,7 @@
             </div>
         </form>
         <br>
-        <button id="opretPatient" onclick="opretPatient();">Opret patient</button>
+
     </div>
     <div>
         <div class="tekstoverskrift">Skriv ID</div>
@@ -54,11 +57,14 @@
         </form>
         <br>
         <div>
-            <button id="hentkonsknap" onclick="hentEKGDATA();">Hent ekgdata</button>
+            <button id="opretPatient" onclick="opretPatient();">Opret patient</button>
         </div>
         <br>
         <br>
     </div>
+
+    <p></p>
+
     <div id="konsIDatabase">
         <div class="tekstoverskrift">
             Konsultationer i databasen

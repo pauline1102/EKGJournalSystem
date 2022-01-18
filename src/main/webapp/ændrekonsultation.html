@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ændre konsultation</title>
+  <link rel="stylesheet" type="text/css" href="css/PFcss.css">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <link rel="stylesheet" type="text/css" href="css/rekcss.css">
+    <link rel="stylesheet" type="text/css" href="css/ændresletkons.css">
+<script src="js/ændresletkons.js"></script>
+</head>
+<body>
+<div class="header" id="myHeader">
+  <u class="underlineHeader"><text class="header1">Sundhedsplatformen 2.0</text></u><br>
+  <text class="header2">Elektronisk patient journal</text><br>
+  <text class="header3">Anno 2021</text><br>
+  <p><input type="button" id="LogudButton" onclick="Logud()" class="button1" value="Log ud"></p>
+    <p><input type="button" id="TilbageButton" onclick="Tilbage()" class="button1" value="Tilbage"></p>
+</div>
+
+<p></p>
+<div id="detførste">
+<div class="tekstoverskrift">
+    Tryk for at se dine konsultationer
+</div>
+
+    <input id="sekonsknap" onclick="SeKonsultation()" type="button" value="Se konsultation">
+<p></p>
+
+<div class="tekstoverskrift">
+    Dine konsultationer
+</div>
+    <ul id="aftaler">
+</ul>
+    </div>
+<p></p>
+</div>
+
+<div class="ændrekons">
+    <p><input id="ændrekonsknap" onclick="ændrekons()" type="button" value="Ændre konsultation"></p>
+</div>
+
+
+<form id="aftaleform">
+    <input type="text" name="cpr" placeholder="CPR-nummer">
+    <input type="text" name="TimeStart" placeholder="YYYY-MM-DD-HH:MM">
+    <input type="text" name="TimeEnd" placeholder="YYYY-MM-DD-HH:MM">
+    <input type="text" name="tilføj notat" placeholder="Tilføj notat">
+</form>
+
+<p></p>
+<div id="opretnykonsultation">
+    <button onclick="opretnykons();">Opret ny konsultation</button>
+
+</div>
+</div>
+
+</body>
+</html>

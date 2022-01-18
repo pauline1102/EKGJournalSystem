@@ -2,13 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Vælgbruger</title>
+    <title>Sletkonsultation</title>
   <link rel="stylesheet" type="text/css" href="css/PFcss.css">
   <link rel="stylesheet" type="text/css" href="css/index.css">
   <link rel="stylesheet" type="text/css" href="css/rekcss.css">
-  <link rel="stylesheet" type="text/css" href="css/vælgbruger.css">
-  <script src="js/vælgbruger.js"></script>
-
+  <script src="js/ændresletkons.js"></script>
 </head>
 <body>
 <div class="header" id="myHeader">
@@ -16,22 +14,32 @@
   <text class="header2">Elektronisk patient journal</text><br>
   <text class="header3">Anno 2021</text><br>
   <p><input type="button" id="LogudButton" onclick="Logud()" class="button1" value="Log ud"></p>
+  <p><input type="button" id="TilbageButton" onclick="Tilbage()" class="button1" value="Tilbage"></p>
 </div>
-<div class="Btncontainer">
-  <div id="vælgpatient">
-    <p> <img src="patient.png" id="patientikon"></p>
-    <div>
-    <input id="vælgpatientknap" onclick="patient()" type="button" value="Patient">
+
+<div id="detførste">
+  <div class="tekstoverskrift">
+    Tryk for at se dine konsultationer
   </div>
-</div>
-<div class="Btncontainer">
-  <div id="vælglæge">
-    <p><img src="læge.svg" id="lægeikon"></p>
-    <div>
-      <button id="vælglægeknap" onclick="læge();">Læge</button>
-    </div>
+
+  <input id="sekonsknap" onclick="SeKonsultation()" type="button" value="Se konsultation">
+  <p></p>
+
+  <div class="tekstoverskrift">
+    Dine konsultationer
   </div>
+  <ul id="aftaler">
+  </ul>
+</div>
+<p></p>
+</div>
+
+<div class="sletkons">
+  <p><input id="sletkonsknap" onclick="sletkons()" type="button" value="Slet konsultation"></p>
+</div>
+
 </div>
 </div>
+
 </body>
 </html>

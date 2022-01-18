@@ -19,44 +19,23 @@
         <br>
         <text class="header3">Anno 2022</text>
         <br>
-        <p>
-            <button id="iddButton" class="button1" onclick="Tilbage()">Tilbage</button>
-        </p>
         <p><input type="button" id="LogudButton" onclick="Logud()" class="button1" value="Log ud"></p>
+        <p><input type="button" id="TilbageButton" onclick="Tilbage()" class="button1" value="Tilbage"></p>
     </div>
 
     <div class="item2 overskriftside">
         <p>Vis EKG</p>
     </div>
+    <div id="tekstForklar">
+        <label for="skrivID">Indtast sessions-ID for den ønskede patient. </label>
+    </div>
     <div>
-        <div class="tekstForklar">
-            <label for="skrivCPR">Indtast CPR for at vise sessions for den pågældende padeint </label>
-        </div>
-        <br>
-        <div>
-            <br>
-            <form>
-                <input id="skrivCPR" name="skrivCPR" placeholder="Indtast CPR" required type="text">
-            </form>
-        </div>
-        <br>
-        <input type="button" onclick="hentSessions();" id="hentSession" value="Hent session">
-        <br>
-        <div id="sessionsforCPR"></div>
-        <br>
-        <div class="tekstForklar">
-            <label for="skrivID">Indtast sessions-ID for den ønskede patient. </label>
-        </div>
-        <br>
-        <div>
-            <form>
-                <input id="skrivID" name="skrivID" placeholder="Indtast ID" required type="text">
-            </form>
-        </div>
-        <br>
-        <div>
-            <input type="button" onclick="hentEKGDATA();" id="hentEKG" value="Hent EKG">
-        </div>
+        <form>
+            <input id="skrivID" name="skrivID" placeholder="Indtast ID" required type="text">
+        </form>
+    </div>
+    <div>
+        <input type="button" onclick="hentEKGDATA();" id="hentEKG" value="Vis EKG">
     </div>
 
     <canvas id="myChart" class="item4">

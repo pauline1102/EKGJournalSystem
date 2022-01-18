@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="css/PFcss.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/lægeForside.css">
+    <script src="js/lægekonsultation.js"></script>
 </head>
 <body>
 <div class="grid">
@@ -18,6 +19,7 @@
     <text class="header3">Anno 2022</text>
     <br>
     <p><input type="button" id="LogudButton" onclick="Logud()" class="button1" value="Log ud"></p>
+    <p><input type="button" id="TilbageButton" onclick="Tilbage()" class="button1" value="Tilbage"></p>
 </div>
 <div class="overskriftside item2">
     <p>Vælg mellem følgende: </p>
@@ -25,26 +27,26 @@
 
 <div class="item3">
     <p><img src="patients.jpg" class="ikoner"></p>
-    <p><input class="lfknapper" onclick="" type="button" value="Patienter">
+    <p><input class="lfknapper" onclick="opretPatient()" type="button" value="Patienter">
     </p>
 </div>
 
 
 <div class="item4">
     <p><img src="kalendericon.jpg" class="ikoner"></p>
-    <p><input class="lfknapper" onclick="" type="button" value="Konsultationer">
+    <p><input class="lfknapper" onclick="hentkonsultationer()" type="button" value="Konsultationer">
     </p>
 </div>
 
 
 <div class="item5">
     <p><img src="ecgicon.jpg" id="heart" class="ikoner"></p>
-    <p><input class="lfknapper" onclick="" type="button" value="EKG sessions"></p>
+    <p><input class="lfknapper" onclick="ekgsessions()" type="button" value="EKG sessions"></p>
 </div>
 
 <div class="item6">
     <p><img src="contacts.jpg" id="kontakt" class="ikoner"></p>
-    <p><input class="lfknapper" onclick="" type="button" value="Hent data fra andre afdelinger">
+    <p><input class="lfknapper" onclick="hentdatafraandre()" type="button" value="Hent data fra andre afdelinger">
     </p>
 </div>
 

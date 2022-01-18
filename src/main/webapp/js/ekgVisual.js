@@ -55,3 +55,10 @@ async function hentEKGDATA() {
     );
 
 }
+
+
+async function Tilbage(){
+    localStorage.setItem("token"," ");
+    window.location.href="lægeForside.html"
+
+}
