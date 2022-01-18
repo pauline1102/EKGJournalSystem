@@ -19,6 +19,8 @@ public class AuthFilter implements ContainerRequestFilter {
             if (!containerRequestContext.getHeaderString("Authorization").equals("hemmeliglogin")) {
                 throw new WebApplicationException("psst hvad er kodeordet?", 401);
             }
+            return;
+        }
 //Undgå at afvise folk der prøver at logge ind.
             String path = containerRequestContext.getUriInfo().getPath();
             if (!"login".equals(path) && !"ecg".equals(path)) {
@@ -31,4 +33,4 @@ public class AuthFilter implements ContainerRequestFilter {
         }
     }
 
-}
+

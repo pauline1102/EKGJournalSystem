@@ -7,7 +7,7 @@ import java.util.List;
 @XmlRootElement (name = "Aftaleliste")
 public class AftaleListe {
     public List<AftaleData> getAftaler() {
-        System.out.println(Aftaler);
+        System.out.println("AftaleListe: " + Aftaler);
         return Aftaler;
     }
 
