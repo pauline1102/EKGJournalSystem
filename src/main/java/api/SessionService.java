@@ -22,7 +22,13 @@ public class SessionService {
         String id = ekgDAO.addEkg(data);
         return id;
     }
-
+    @GET
+    @Path("{cpr}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public String getCPR(@PathParam("cpr") String cpr){
+        System.out.println("sessionID for CPR? = " +sessionsDAO.getSessions(cpr));
+        return sessionsDAO.getSessionID(cpr);
+    }
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("{sessionID}")
@@ -32,12 +38,7 @@ public class SessionService {
         return ekgDAO.getEkg(sessionID);
     }
 
-    @GET
-    @Path("{cpr}")
-    public String getCPR(@PathParam("cpr") String cpr){
-        System.out.println("sessionID for CPR? = " +sessionsDAO.getSessions(cpr));
-        return sessionsDAO.getSessionID(cpr);
-    }
+
 
 }
 

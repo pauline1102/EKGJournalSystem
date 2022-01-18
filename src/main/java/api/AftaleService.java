@@ -9,21 +9,14 @@ import data.AftaleListe;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
-@Path("aftale")
+@Path("aftaler")
 public class AftaleService {
 
     private AftaleDAO aftaleDAO = new AftaleDAO();
 
- /*   @GET
-    @Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
-    public List<AftaleData> getAftaler() {
-        return aftaleDAO.getAftaler();
-    }
-*/
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     public void opretAftale(AftaleData aftale) {
-
         aftaleDAO.addAftale(aftale);
     }
 

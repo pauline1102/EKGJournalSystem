@@ -2,7 +2,7 @@ package data;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement
+@XmlRootElement (name = "session")
 public class SessionsData {
 
     String sessionID;
