@@ -64,11 +64,11 @@ async function getMeasurements() {
     }
     let json2 = await result2.json();
     console.log(json2)
-    /*for (let i =0; i<json2[0].measurements.length; i++){
+    for (let i =0; i<json2[0].measurements.measurment.length; i++){
         let measurement1 = json2[0].measurements[i]
         document.getElementById("measurements1").innerHTML +=JSON.stringify(measurement1)
     }
-    for (let i =0; i<json2[1].measurements.length; i++){
+    for (let i =0; i<json2[1].measurements.measurment.length; i++){
         let measurement2 = json2[1].measurements[i]
         document.getElementById("measurements1").innerHTML +=JSON.stringify(measurement2)
     }
@@ -76,7 +76,7 @@ async function getMeasurements() {
         let measurement3 = json2[2].ekgData.ekgSession[i]
         document.getElementById("measurements1").innerHTML +=JSON.stringify(measurement3)
     }
-*/
+
 }
 
 

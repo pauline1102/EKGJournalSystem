@@ -26,27 +26,27 @@
     <div class="item2 overskriftside">
         <p>Vis EKG</p>
     </div>
-</div>
-    <div>
-        <div class="tekstForklar">
-            <label for="skrivCPR">Indtast CPR for at vise sessions for den pågældende padeint </label>
+
+    <div class="item3">
+        <div class="tekstForklar" id="forklarcpr">
+            <label for="skrivCPR">Indtast CPR for at vise sessions for den pågældende patient: </label>
         </div>
-        <br>
+
         <div>
-            <br>
-            <form>
-                <input id="skrivCPR" name="skrivCPR" placeholder="Indtast CPR" required type="text">
+            <form id="formcpr">
+                <input id="skrivCPR" form="formcpr"name="skrivCPR" placeholder="Indtast CPR" required type="text">
             </form>
         </div>
         <br>
         <input type="button" onclick="hentSessions();" id="hentSession" value="Hent session">
+        <div id="sessionsforCPR"> </div>
         <br>
-        <div id="sessionsforCPR"></div>
         <br>
-        <div class="tekstForklar">
-            <label for="skrivID">Indtast sessions-ID for den ønskede patient. </label>
+        <br>
+
+        <div class="tekstForklar" id="forklarsession">
+            <label for="skrivID">Indtast sessions-ID for den ønskede session: </label>
         </div>
-        <br>
         <div>
             <form>
                 <input id="skrivID" name="skrivID" placeholder="Indtast ID" required type="text">
@@ -57,7 +57,7 @@
             <input type="button" onclick="hentEKGDATA();" id="hentEKG" value="Hent EKG">
         </div>
     </div>
-
+</div>
     <canvas id="myChart" class="item4">
 
     </canvas>

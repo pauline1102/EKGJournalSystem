@@ -22,14 +22,14 @@ public class AuthFilter implements ContainerRequestFilter {
             return;
         }
 //Undgå at afvise folk der prøver at logge ind.
-           String path = containerRequestContext.getUriInfo().getPath();
+          /* String path = containerRequestContext.getUriInfo().getPath();
             if (!"login".equals(path) && !"ekgSessions".equals(path)) {
                 String authorization = containerRequestContext.getHeaderString("Authorization");
                 if (authorization == null) {
                     throw new WebApplicationException("manglende header", 401);
                 }
                 JWTHandler.validate(authorization.split(" ")[1]);
-            }
+            }*/
         }
     }
 

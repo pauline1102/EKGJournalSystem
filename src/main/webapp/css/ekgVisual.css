@@ -25,37 +25,28 @@
     grid-column-start: seven;
     grid-column-end: eight;
 
-    align-self: center;
+    align-self: start;
+    justify-self: center;
 }
 
 .item3{
     grid-row-start: line-three;
-    grid-row-end: line-four;
+    grid-row-end: lastline;
     grid-column-start: two;
-    grid-column-end: four;
+    grid-column-end: six;
+    column-span: 5;
+    justify-self: start;
+    align-self: start;
 
 }
 .item4{
-    grid-row-start: line-four;
-    grid-row-end: line-eight;
-    grid-column-start: two;
-    grid-column-end: six;
-    width: 200px;
+
 
 }
 .item5{
-    grid-row-start: line-five;
-    grid-row-end: line-six;
-    grid-column-start: three;
-    grid-column-end: four;
-    width: 100px;
+
 }
 .item6{
-    grid-row-start: third-line;
-    grid-row-end: fourth-line;
-    grid-column-start: eight;
-    grid-column-end: 10;
-    width: 200px;
 
 
 }
@@ -74,15 +65,10 @@
     width: 800px;
 }
 
-#hentEKG{
-    width: 100px;
-    margin-left: 20%;
+#forklarcpr{
+    width: 175px;
 }
 
-#tekstForklar{
-    margin-left: 25%;
-}
-
-#skrivID{
-    margin-left: 20%;
+#forklarsession{
+    width: 175px;
 }

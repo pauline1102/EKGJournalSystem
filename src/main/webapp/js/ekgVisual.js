@@ -4,7 +4,7 @@ async function hentSessions(){
     let cpr1 = document.getElementById("skrivCPR").value
     let res = await fetch("rest/ekgSessions/" + cpr1,{
         headers:{
-            "authorization": "Bearer " + localStorage.getItem("token")
+            "authorization": "Bearer " + localStorage.getItem("token"),
         }
     });
     console.log(res.status)
@@ -12,16 +12,17 @@ async function hentSessions(){
         alert("noget gik galt!");
     }
     let json1 = await res.json();
-    console.log(json1)
+    console.log("session ID" +json1)
+    let sessionID1 = json1[0].sessions[i]
+    document.getElementById("sessionsforCPR").innerHTML =JSON.stringify(sessionID1)
 
-    document.getElementById("sessionsforCPR").innerHTML = json1;
 
 }
 
 
 async function hentEKGDATA() {
     const sessionID = document.getElementById("skrivID").value
-    let result = await fetch("rest/ekgSessions/" + sessionID, {
+    let result = await fetch("rest/ekgSessions/measurements/" + sessionID, {
             headers: {
                 "authorization": "Bearer " + localStorage.getItem("token")
             }

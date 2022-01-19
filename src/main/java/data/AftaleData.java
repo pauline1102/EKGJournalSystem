@@ -1,9 +1,9 @@
 package data;
 
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 
-@XmlRootElement(name = "Aftaler")
 public class AftaleData {
 
 
@@ -16,7 +16,12 @@ public class AftaleData {
 
 
     public AftaleData(String cpr, String id, String timeStart, String timeEnd, int klinikID, String notat) {
-
+    this.cpr = cpr;
+    this.id = id;
+    this.timeStart = timeStart;
+    this.timeEnd = timeEnd;
+    this.klinikID = klinikID;
+    this.notat = notat;
     }
 
     @Override

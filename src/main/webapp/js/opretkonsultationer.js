@@ -14,7 +14,7 @@ async function opretKonsultation(){
 }
 
 async function  SeKonsultation(){
-    let result = await fetch("rest/aftaler", {
+    let result = await fetch("rest/aftaler?cpr=", {
             headers: {
                 "authorization": "Bearer " + localStorage.getItem("token")
             }
@@ -44,6 +44,6 @@ async function Logud(){
 
 async function Tilbage(){
     localStorage.setItem("token"," ");
-    window.location.href="patientForside.html"
+    window.location.href="PatientForside.html"
 
 }

@@ -21,7 +21,7 @@ public class AftaleService {
     }
 
     @GET
-    @Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
+    @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     @Path("{cpr}")
     public AftaleListe getAftale(@PathParam("cpr") String cpr) { //skal der være en query param her også??
         System.out.println(aftaleDAO.getAftaler(cpr));
@@ -29,49 +29,21 @@ public class AftaleService {
     }
 
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_XML)
     public String getAftaleXML(@QueryParam("cpr") String cpr) throws JsonProcessingException {
         XmlMapper mapper = new XmlMapper();
         String s = mapper.writeValueAsString(aftaleDAO.getAftaler(cpr));
+        System.out.println(s);
         return s;
     }
-/*    @DELETE
+}
+   /* @DELETE
     @Consumes(MediaType.APPLICATION_JSON)
     @Path("{id}")
     public void deleteAftale(@PathParam("id") String id){
         aftaleDAO.deleteAftaler(id);
     }*/
 
-
-    /*
-    /*@DELETE
-    @Consumes(MediaType.APPLICATION_JSON)
-    public void deleteAftale(String cpr) {
-        System.out.println("Removing aftale with CPR: " + cpr);
-        for (AftaleData aftale : aftaleDAO.getAftaler()) {
-            if (aftale.getCpr().equals(cpr)) {
-                System.out.println("Aftale med patient: " + cpr + ": DATE: " + aftale.getDate() + " CPR: " + cpr + " has been deleted");
-            }
-        }
-    }
-
-     */
-
-
-//
-//    @PUT
-//    @Consumes(MediaType.APPLICATION_JSON)
-//    public void editAftale(String cpr, String nyDate) {
-////            for (Aftale aftale : aftaleDAO.getAftaler()) {
-////                if (aftale.getCpr().equals(cpr)) {
-////                    String beforeDate = aftale.getDate();
-////                    aftale.setDate(nyDate);
-////                    System.out.println("Aftale with patient: " + cpr + " has been changed from: " + beforeDate + " to: " + nyDate);
-////                }
-////            }
-//    }
-
-}
 
 
 

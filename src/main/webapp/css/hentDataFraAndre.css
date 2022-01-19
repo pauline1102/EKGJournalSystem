@@ -1,3 +1,44 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: [one] 50px [two] 100px [three] 100px [four] 100px [five] 100px [six] 100px [seven] 100px [eight] 100px [nine] 100px [ten] auto [eleven];
+    grid-template-rows: [row1-start] 70px [row1-end] 25px [line-three] 25px [line-four] 25px [line-five] 25px [line-six] auto [lastline];
+    row-gap: 10px;
+
+}
+.item1{
+    grid-column-start: one;
+    grid-column-end: eleven;
+    column-span: 10;
+    grid-row-start: row1-start;
+    grid-row-end: row1-end;
+}
+
+.item2{
+    grid-row-start: row1-end;
+    grid-row-end: line-three;
+    grid-column-start: seven;
+    grid-column-end: eight;
+
+    align-self: start;
+    justify-self: center;
+}
+
+.item3{
+    grid-row-start: line-three;
+    grid-row-end: lastline;
+    grid-column-start: two;
+    grid-column-end: six;
+    column-span: 5;
+    justify-self: start;
+    align-self: start;
+
+}
 #aftale{
 border-color: #00befd;
     width: 100px;

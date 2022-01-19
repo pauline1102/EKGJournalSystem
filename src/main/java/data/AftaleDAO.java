@@ -69,7 +69,9 @@ public class AftaleDAO {
             AftaleListe aftaleListe = new AftaleListe();
            // List<AftaleData> aftaleList = new ArrayList<>();
             while (resultSet.next()){
+                System.out.println(resultSet.getMetaData().getColumnCount());
                 String cpr = resultSet.getString("CPR");
+                System.out.println(cpr);
                 String id = resultSet.getString("ID");
                 String timeStart = resultSet.getString("timeStart");
                 String timeEnd = resultSet.getString("timeEnd");
@@ -77,6 +79,7 @@ public class AftaleDAO {
                 String notat = resultSet.getString("notat");
                 AftaleData aftale = new AftaleData(cpr, id, timeStart, timeEnd, klinikID, notat);
                 aftaleListe.getAftaler().add(aftale);
+                System.out.println(aftale);
             }
             return aftaleListe;
         } catch (SQLException throwables) {

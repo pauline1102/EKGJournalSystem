@@ -48,7 +48,7 @@ public class EkgDAO {
                 Float measurement = resultSet.getFloat("dataEkg");
                 measurementsList.add(measurement);
             }
-            System.out.println("Liste med measurements =" +measurementsList);
+            System.out.println("Liste med measurements = " +measurementsList);
             System.out.println(findSessionID);
             return measurementsList;
         } catch (SQLException e) {

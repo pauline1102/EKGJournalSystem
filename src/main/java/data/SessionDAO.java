@@ -11,6 +11,7 @@ import java.util.List;
 
 public class SessionDAO {
     private static Connection connection = new DBConnector().getMySQLConnection();
+
     public SessionsData getSessions(String findSessions){
         String getSessions = "SELECT * FROM sessions WHERE cpr = ?";
         System.out.println("Finder sessions for cpr" + findSessions);
@@ -31,16 +32,22 @@ public class SessionDAO {
         } return null;
     }
 
-    public String getSessionID(String findsession){
-        String getSessionID = "SELECT sessionID FROM sessions WHERE cpr = ?";
+  public SessionListe getSessionID(String findsession){
+        String getSessionID = "SELECT * FROM sessions WHERE cpr = ?";
         System.out.println("Finder sessionsID på cpr =" + findsession);
         try{
             PreparedStatement preparedStatement = connection.prepareStatement(getSessionID);
             preparedStatement.setString(1, findsession);
             ResultSet resultSet = preparedStatement.executeQuery();
+            SessionsData sessionsData = new SessionsData();
+            SessionListe sessionListe = new SessionListe();
             while (resultSet.next()){
-                String sessionID = resultSet.getString("sessionID");
-                return sessionID;
+                sessionsData.setSessionID(resultSet.getString("sessionID"));
+                sessionsData.setCpr(resultSet.getString("cpr"));
+                sessionsData.setTimeStart(resultSet.getString("timeStart"));
+                sessionsData.setComments(resultSet.getString("comments"));
+                sessionListe.getSessions().add(sessionsData);
+                return sessionListe;
             }
             System.out.println(findsession);
 

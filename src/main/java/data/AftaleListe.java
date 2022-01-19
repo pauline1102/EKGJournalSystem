@@ -1,5 +1,6 @@
 package data;
 
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,10 +12,12 @@ public class AftaleListe {
         return Aftaler;
     }
 
+
     public void setAftaler(List<AftaleData> aftaler) {
         Aftaler = aftaler;
     }
 
+    @XmlElement
     List<AftaleData> Aftaler = new ArrayList<>();
 
 }
