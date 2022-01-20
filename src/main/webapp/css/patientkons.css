@@ -87,4 +87,18 @@
     width: 200px;
 }
 
+#ændreikon{
+    width: 100%;
+    border-radius: 50%;
+}
+
+#sletikon{
+    width: 100%;
+    border-radius: 50%;
+}
+
+#opret{
+    width: 100%;
+}
+
 

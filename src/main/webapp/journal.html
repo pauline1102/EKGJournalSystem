@@ -18,26 +18,61 @@
   <p><input type="button" id="LogudButton" onclick="Logud()" class="button1" value="Log ud"></p>
     <p><input type="button" id="TilbageButton" onclick="Tilbage()" class="button1" value="Tilbage"></p>
 </div>
-<!--
+
+<br>
+<div id="Først">
+  <div class="overskriftside">
+    Se journal notater
+  </div>
+</div>
+
+<br>
 <div id="detførste">
 <div class="tekstoverskrift">
- Tryk for at se din journal
+Fremsøg journal notat for følgende CPR-nummer
 </div>
 
-<input id="sejournalknap" onclick="sejournal()" type="button" value="Se journal">
-<p></p>
+  <form id="aftaleforme">
+    <p></p>
+    <input type="text" name="cpr" placeholder="CPR-nummer">
+    <p></p>
+    <input id="sejournalknap" onclick="sejournal()" type="button" value="Se journal notat">
+  </form>
+  </div>
 
-<div class="tekstoverskrift">
- Din journal
+<div id="journaltekst">
+  <div class="tekstoverskrift">
+    Journal notater
+    </div>
+<textarea  id="tekstjournal" name="text" cols="25" rows="5">
+Dette er din journal.
+    Vi har foretaget et EKG....
+</textarea>
 </div>
--->
+
+<div id="tekst">
+  <div class="tekstoverskrift">
+    Læge
+  </div>
+  <textarea  id="lægetekst" name="text" cols="25" rows="5">
+Navn
+(ID)
+</textarea>
+  <p></p>
+
+  <div id="tekstp">
+    <div class="tekstoverskrift">
+      Patient
+    </div>
+  <textarea  id="tekstpatient" name="text" cols="25" rows="5">
+Navn
+CPR
+</textarea>
+
+
   <!--https://www.quackit.com/html/codes/html_text_box_code.cfm-->
   <p></p>
   <div>
-  <textarea  id="tekstjournal" name="text" cols="25" rows="5">
-Dette er din journal.
-    Vi har foretaget et EKG, og kan se at du har syndromet wolff parkison white....
-</textarea>
 </div>
 </div>
 

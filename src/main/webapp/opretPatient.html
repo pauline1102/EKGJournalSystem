@@ -9,69 +9,28 @@
     <script src="js/hentkons.js"></script>
 </head>
 <body>
-<div class="container">
-    <div class="header" id="grid-item1">
-        <u class="underlineHeader">
-            <text class="header1">Sundhedsplatformen 2.0</text>
-        </u><br>
-        <text class="header2">Elektronisk patient journal</text>
-        <br>
-        <text class="header3">Anno 2021</text>
-        <br>
-        <p><input type="button" id="LogudButton" onclick="Logud()" class="button1" value="Log ud"></p>
-        <p><input type="button" id="TilbageButton" onclick="Tilbage()" class="button1" value="Tilbage"></p>
-    </div>
+<div class="header" id="myHeader">
+    <u class="underlineHeader"><text class="header1">Sundhedsplatformen 2.0</text></u><br>
+    <text class="header2">Elektronisk patient journal</text><br>
+    <text class="header3">Anno 2021</text><br>
+    <p><input type="button" id="LogudButton" onclick="Logud()" class="button1" value="Log ud"></p>
+    <p><input type="button" id="TilbageButton" onclick="Tilbage()" class="button1" value="Tilbage"></p>
+</div>
 
-    <div class="overskriftside">
-        <p> Opret ny patient </p>
-    </div>
-
-    <div class="grid-item3">
-        Angiv følgende oplysninger.<br>
-        Bekræft med OK
-    </div>
-
-    <div class="grid-item4">
-        <form id="formOP">
-            <div>
-                <label for="patientnavn2">Navn på patient:</label>
-            </div>
-            <div id="patientnavn">
-                <input name="patientnavn" id="patientnavn2">
-            </div>
-            <div>
-                <label for="cprpatient">CPR-nummer for patient:</label><br>
-            </div>
-            <div>
-                <input name="cprpatient" id="cprpatient">
-            </div>
-        </form>
-        <br>
-
-    </div>
-    <div>
-        <div class="tekstoverskrift">Skriv ID</div>
-        <br>
-        <form id="formID">
-            <input id="skrivID" name="skrivID" placeholder="Indtast ID" required type="text">
-        </form>
-        <br>
-        <div>
-            <button id="opretPatient" onclick="opretPatient();">Opret patient</button>
+<br>
+    <div id="detførste">
+        <div class="overskriftside">
+            Indtast CPR-nummer for at oprette patient
         </div>
-        <br>
-        <br>
+        <form id="aftaleforme">
+            <p></p>
+            <input type="text" name="cpr" placeholder="CPR-nummer">
+            <p></p>
+            <input id="opretPatient" onclick="opretPatient()" type="button" value="Opret patient">
+        </form>
+        <p></p>
     </div>
 
-    <p></p>
-
-    <div id="konsIDatabase">
-        <div class="tekstoverskrift">
-            Konsultationer i databasen
-        </div>
-        <ul id="aftaler">
-        </ul>
-    </div>
 </div>
 </body>
 </html>

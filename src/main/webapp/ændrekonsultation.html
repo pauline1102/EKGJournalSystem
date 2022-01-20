@@ -21,15 +21,20 @@
 <p></p>
 <div id="detførste">
 <div class="tekstoverskrift">
-    Tryk for at se dine konsultationer
+    Tryk for at hente for følgende CPR-nummer
 </div>
-
-    <input id="sekonsknap" onclick="SeKonsultation()" type="button" value="Se konsultation">
+    <form id="aftaleforme">
+        <p></p>
+        <input type="text" name="cpr" placeholder="CPR-nummer">
+        <p></p>
+        <input id="sekonsknap" onclick="SeKonsultation()" type="button" value="Se konsultation">
+    </form>
 <p></p>
 
 <div class="tekstoverskrift">
     Dine konsultationer
 </div>
+    <p></p>
     <ul id="aftaler">
 </ul>
     </div>
@@ -43,9 +48,11 @@
 
 <form id="aftaleform">
     <input type="text" name="cpr" placeholder="CPR-nummer">
+    <input type="text" name="tilføj notat" placeholder="Tilføj notat">
+    <p></p>
     <input type="text" name="TimeStart" placeholder="YYYY-MM-DD-HH:MM">
     <input type="text" name="TimeEnd" placeholder="YYYY-MM-DD-HH:MM">
-    <input type="text" name="tilføj notat" placeholder="Tilføj notat">
+
 </form>
 
 <p></p>

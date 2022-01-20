@@ -13,11 +13,11 @@
     width: 200px;
 }
 #opretnykonsultation{
-    margin-left: 62%;
+    margin-left: 47%;
 }
 
 #aftaleform{
-    margin-left: 20%;
+    margin-left: 33%;
 }
 
 #detførste {
@@ -26,5 +26,16 @@
 }
 
 #sekonsknap{
-    margin-left: 17%;
+margin-left: 4%;
+}
+
+#aftaleforme{
+    margin-left: 5%;
+}
+#første{
+    margin-left: 35%
+}
+
+#anden{
+    margin-left: 35%;
 }

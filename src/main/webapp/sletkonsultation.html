@@ -17,12 +17,17 @@
   <p><input type="button" id="TilbageButton" onclick="Tilbage()" class="button1" value="Tilbage"></p>
 </div>
 
-<div id="detførste">
+<div id="anden">
+  <div>
   <div class="tekstoverskrift">
     Tryk for at se dine konsultationer
   </div>
-
+<p></p>
+  <form id="aftaleform">
+    <input type="text" name="cpr" placeholder="CPR-nummer">
+    <p></p>
   <input id="sekonsknap" onclick="SeKonsultation()" type="button" value="Se konsultation">
+  </form>
   <p></p>
 
   <div class="tekstoverskrift">
@@ -36,9 +41,6 @@
 
 <div class="sletkons">
   <p><input id="sletkonsknap" onclick="sletkons()" type="button" value="Slet konsultation"></p>
-</div>
-
-</div>
 </div>
 
 </body>

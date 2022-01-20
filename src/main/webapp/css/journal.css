@@ -1,6 +1,7 @@
 #sejournalknap{
-    width:100px;
-    margin-left: 10% ;
+    width:130px;
+margin-left: 2%;
+
 }
 
 #aftaler {
@@ -10,10 +11,22 @@
 }
 
 #detførste {
-    margin-left: 35%;
+
 
 }
 
 #sekonsknap{
     margin-left: 17%;
+}
+
+#Først{
+    margin-left: 40%;
+}
+
+#aftaleforme{
+
+}
+
+#journaltekst{
+    margin-left: 75%;
 }

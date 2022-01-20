@@ -41,8 +41,13 @@
     padding-left: 15px;
     padding-right: 15px;
 }
+#overskriftside{
+    color: #00befd;
+}
 
-
+#detførste{
+    margin-left: 35%
+}
 /*
 .container{
     display: grid;

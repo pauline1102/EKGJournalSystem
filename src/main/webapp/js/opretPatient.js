@@ -11,7 +11,22 @@ async function opretPatient() {
             }
 
         })
+    {
+
+        let confirmAction=confirm("Bekærft oprettelse af patient");
+        if(confirmAction){
+            alert("Patient oprettet");
+        }
+        else{
+            alert("Oprettelse af patient annulleret");
+        }
+
+        console.log(confirmAction);
+        //OK=true, Cancel=false
+
+    }
 }
+
 
 async function Tilbage(){
     localStorage.setItem("token"," ");

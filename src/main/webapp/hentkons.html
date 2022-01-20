@@ -7,8 +7,9 @@
   <link rel="stylesheet" type="text/css" href="css/index.css">
   <link rel="stylesheet" type="text/css" href="css/patientkons.css">
     <link rel="stylesheet" type="text/css" href="css/rekcss.css">
-    <script src="js/opretkonsultationer.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/hentkons.css">
     <script src="js/hentkons.js"></script>
+
 
 </head>
 <body>
@@ -20,21 +21,27 @@
     <p><input type="button" id="TilbageButton" onclick="Tilbage()" class="button1" value="Tilbage"></p>
 </div>
 
-<div class="overskriftside item2">
-    <p>Konsultationer </p>
-    <button onclick="SeKonsultation();">Hent konsultation</button>
-
+<div>
+<div id="detførste" >
+    <p></p>
+    <br>
+    <div class="tekstoverskrift">
+        Hent konsultation for følgende CPR-nummer
+    </div>
+    <p></p>
+<br>
+    <form id="aftaleform">
+        <input id="cpr" type="text" name="cpr" placeholder="CPR-nummer">
+        <p></p>
+        <br>
+        <input id="hentknap" onclick="SeKonsultation()" type="button" value="Hent konsultationer">
+    </form>
 </div>
-<p></p>
-<div class="tekstoverskrift">
-    Dine konsultationer
-</div>
-<p></p>
-
+<br>
 <ul id="aftaler">
 </ul>
 </div>
-</div>
+
 
 
 

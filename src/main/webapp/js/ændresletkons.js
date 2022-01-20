@@ -19,9 +19,23 @@ async function ændrekons(){
             "authorization": "Bearer "+localStorage.getItem("token")
         }
     })
-    {
-        window.alert("Bekræft ændring af konsultation")
-    }
+
+
+        {
+
+            let confirmAction=confirm("Bekærft ændring  af konsultation");
+            if(confirmAction){
+                alert("Konsultation ændret");
+            }
+            else{
+                alert("Ændring af konsulation annulleret");
+            }
+
+            console.log(confirmAction);
+            //OK=true, Cancel=false
+
+        }
+
 }
 
 async function opretnykons(){
@@ -36,10 +50,6 @@ async function opretnykons(){
             "authorization": "Bearer " + localStorage.getItem("token")
         }
     })
-
-    {
-       alert("Ny konsultation oprettet")
-    }
 }
 
 async function sletkons(){
@@ -53,6 +63,40 @@ async function sletkons(){
     })
 
     {
-        alert("Bekræft sletning af konsultation")
+
+        let confirmAction=confirm("Bekærft slettelse af konsultation");
+        if(confirmAction){
+            alert("Konsultation slettet");
+        }
+        else{
+            alert("Slettelse konsulation annulleret");
+        }
+
+        console.log(confirmAction);
+        //OK=true, Cancel=false
     }
+
+}
+
+async function  SeKonsultation(){
+    let result = await fetch("rest/aftaler", {
+            headers: {
+                "authorization": "Bearer " + localStorage.getItem("token")
+            }
+        }
+    );
+    console.log(result.status)
+    if (result.status!=200){
+        alert("noget gik galt!");
+    }
+    let json = await result.json();
+    console.log(json)
+
+    let listelements =""
+    json.forEach(function(element){
+        listelements +=("<li>"+element.date+"</li>")
+    })
+
+    let list = document.getElementById("aftaler");
+    list.innerHTML=listelements
 }
