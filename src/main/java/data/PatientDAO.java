@@ -2,10 +2,6 @@ package data;
 
 import db.DBConnector;
 
-import javax.ws.rs.Consumes;
-import javax.ws.rs.POST;
-import javax.ws.rs.core.MediaType;
-import javax.xml.transform.Result;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -15,7 +11,7 @@ public class PatientDAO {
     private static Connection connection = new DBConnector().getMySQLConnection();
 
     public void addPatient(PatientData patient){
-        String insertPatient = "INSERT INTO patienter (name, cpr) VALUES (?,?):";
+        String insertPatient = "INSERT INTO s205481.patienter (name, cpr) VALUES (?,?):";
         System.out.println(insertPatient);
         try{
             PreparedStatement preparedStatement = connection.prepareStatement(insertPatient);
